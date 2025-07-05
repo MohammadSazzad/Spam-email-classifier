@@ -11,7 +11,8 @@ import pickle
 import os
 import streamlit as st
 
-model_path = os.path.expanduser('~/Documents/ML_Project/trained_mail_model.sav')
+SCRIPT_DIR = os.path.dirname(__file__)
+model_path = os.path.join(SCRIPT_DIR, 'trained_mail_model.sav')
 
 with open(model_path, 'rb') as f:
         artifacts = pickle.load(f)
